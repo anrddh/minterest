@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('minterestApp')
-  .controller('NewCtrl', function ($scope, $http, Auth, $location) {
-    $scope.mint = { user: Auth.getCurrentUser().name };
+  .controller('NewCtrl',['$scope', '$http', 'Auth', '$location' function ($scope, $http, Auth, $location) {
+      $scope.mint = { user: Auth.getCurrentUser().name };
 
-    $scope.submitMint = function() {
-        $http.post('/api/mints', $scope.mint).
-        then(function() {
-            $location.path('/');
-        });
-    };
-  });
+      $scope.submitMint = function() {
+          $http.post('/api/mints', $scope.mint).
+          then(function() {
+              $location.path('/');
+          });
+      };
+}]);

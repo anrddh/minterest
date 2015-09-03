@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('minterestApp')
-  .controller('MainCtrl', function ($scope, $http, socket, Auth) {
+  .controller('MainCtrl', ['$scope', '$http', 'socket', 'auth', function ($scope, $http, socket, Auth) {
     $scope.mints = [];
 
     $http.get('/api/mints').success(function(mints) {
@@ -23,4 +23,4 @@ angular.module('minterestApp')
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('mint');
     });
-  });
+  }]);
