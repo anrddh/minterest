@@ -14,7 +14,7 @@ angular.module('minterestApp')
         return true;
       }
       return false;
-    }
+    };
 
     $scope.deleteMint = function(mint) {
       $http.delete('/api/mints/' + mint._id);

@@ -4,4 +4,4 @@ $('.grid').masonry({
   // use element for option
   columnWidth: '.grid-sizer',
   percentPosition: true
-})
+});

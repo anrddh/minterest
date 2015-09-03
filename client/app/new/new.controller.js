@@ -6,8 +6,8 @@ angular.module('minterestApp')
 
     $scope.submitMint = function() {
         $http.post('/api/mints', $scope.mint).
-        then(function(response) {
+        then(function() {
             $location.path('/');
         });
-    }
+    };
   });
