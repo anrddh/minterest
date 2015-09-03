@@ -16,7 +16,7 @@
         <div class="grid-sizer"></div>
         <div class="grid-item" ng-repeat="mint in mints">
           <img src="{{mint.url}}"><br>
-          Minted by {{mint.user}}. <a ng-show="mintOwner(mint)" ng-click="deleteMint(mint)">Delete</a><br><br>
+          Minted by <a href="/wall/{{mint.user}}">{{mint.user}}</a>. <a ng-show="mintOwner(mint)" ng-click="deleteMint(mint)">Delete</a><br><br>
         </div>
       </div>
     </div>
@@ -29,6 +29,3 @@
          <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
   </div>
 </footer>
-<script>
-
-</script>

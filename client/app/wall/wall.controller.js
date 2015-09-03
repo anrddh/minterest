@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('minterestApp')
-  .controller('MainCtrl', function ($scope, $http, socket, Auth) {
+  .controller('WallCtrl', function ($scope, $http, $routeParams, Auth, socket) {
     $scope.mints = [];
 
-    $http.get('/api/mints').success(function(mints) {
+    $scope.user = $routeParams.username;
+
+    $http.get('/api/mints/'+$scope.user).success(function(mints) {
       $scope.mints = mints;
       socket.syncUpdates('mint', $scope.mints);
     });
