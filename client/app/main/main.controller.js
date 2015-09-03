@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('minterestApp')
-  .controller('MainCtrl', ['$scope', '$http', 'socket', 'auth', function ($scope, $http, socket, Auth) {
+  .controller('MainCtrl', ['$scope', '$http', 'socket', 'Auth', function ($scope, $http, socket, Auth) {
     $scope.mints = [];
 
     $http.get('/api/mints').success(function(mints) {

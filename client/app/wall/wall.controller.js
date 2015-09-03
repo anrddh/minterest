@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('minterestApp')
-  .controller('WallCtrl', ['$scope','http','$routeParams','Auth','socket',function ($scope, $http, $routeParams, Auth, socket) {
+  .controller('WallCtrl', ['$scope','$http','$routeParams','Auth','socket',function ($scope, $http, $routeParams, Auth, socket) {
     $scope.mints = [];
 
     $scope.user = $routeParams.username;

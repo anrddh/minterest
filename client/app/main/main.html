@@ -15,7 +15,7 @@
       <div class="grid">
         <div class="grid-sizer"></div>
         <div class="grid-item" ng-repeat="mint in mints">
-          <img src="{{mint.url}}" onError="this.onerror=null;this.src='http://www.engraversnetwork.com/files/placeholder.jpg';"><br>
+          <img src="{{mint.url}}" onError="this.onerror=null;this.src='https://placeholdit.imgix.net/~text?txtsize=33&txt=Placeholder&w=350&h=150';"><br>
           Minted by <a href="/wall/{{mint.user}}">{{mint.user}}</a>. <a ng-show="mintOwner(mint)" ng-click="deleteMint(mint)">Delete</a><br><br>
         </div>
       </div>
